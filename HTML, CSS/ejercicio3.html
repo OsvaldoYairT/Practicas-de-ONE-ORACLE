@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condiciones 2</title>
+</head>
+<body>
+    <h1>Condiciones 2</h1>
+    <script>
+      function saltolinea() {
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+      }
+      function imprimir(frase) {
+        document.write(frase);
+        saltolinea();
+      }
+      function calculoimc (peso, altura){ 
+        return (peso / (altura*altura))
+      }
+
+      
+      nombre =prompt("Cual es tu nombre ");
+      infPeso=prompt(nombre + " Cual es tu peso");
+      infAltura = prompt(nombre + " Cual es tu pedo");
+
+      total = calculoimc (infPeso, infAltura)
+
+      imprimir(nombre + " su imc calculado es: " +  total);
+       
+      if (total > 18.5){
+        imprimir("IMC esta abajo del indice normal")
+
+      }
+
+      if (total >= 18.5){
+        if (total < 55){
+        imprimir("IMC esta dentro del indice normal")
+
+      }
+      }
+
+      if (total >= 25){
+        if (total < 30 ){
+        imprimir("IMC esta dentro del indice normal")
+
+      }
+      }
+      if (total >= 30){
+        imprimir("IMC considerado como obesidad ")
+
+      }
+
+
+    </script>
+</body>
+</html>

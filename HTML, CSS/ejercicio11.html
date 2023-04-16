@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Juego de secreto</h1>
+
+    <input />
+    <button>Verificar si acerto con el secreto</button>
+    <script>
+      var secreto = [3, 5, 7, 9,11,13];
+      var input = document.querySelector("input");
+      input.focus();
+
+      function verificar() {
+        var encontrado = false;
+        /* Pasa saber el tamaño de un arreglo */
+        for (var posicion = 0; posicion <= secreto.length; posicion++) {
+          if (parseInt(input.value) == secreto[posicion]) {
+            alert("usted acerto");
+            encontrado = true;
+            break;
+          }
+        }
+        if (encontrado == false) {
+          alert("usted no acerto");
+          input.value = "";
+          input.focus();
+        }
+      }
+
+      var button = document.querySelector("button");
+      button.onclick = verificar;
+    </script>
+  </body>
+</html>
